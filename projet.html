@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SAE WebGL</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background-color: #f9f9f9;
+        color: #333;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 100vh;
+      }
+
+      .centre {
+        text-align: center;
+      }
+
+      h1 {
+        padding: 10vh 0;
+        font-size: 2.5rem;
+        color: #333;
+      }
+
+      .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        padding: 2rem;
+      }
+
+      img {
+        width: 25%;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      ul {
+        margin-left: 5vh;
+      }
+
+      .paragraphe_technique {
+        width: 60%;
+        padding: 2rem;
+        text-align: justify;
+        background-color: #fff;
+        border-radius: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <script
+      async
+      src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"
+    ></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://threejs.org/build/three.module.js",
+          "three/addons/": "https://threejs.org/examples/jsm/"
+        }
+      }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <h1 class="centre">SAE WebGL</h1>
+
+    <div class="content">
+      <div class="paragraphe_technique">
+        <p>
+          Dans ce code, vous avez créé une scène en 3D avec l'utilisation de la
+          bibliothèque Three.js. Voici une explication de ce que vous avez fait :
+          <br /><br />
+          <ul>
+            <li>
+              La scène a été initialisée avec la bibliothèque Three.js. Cela
+              permet de :
+              <ul>
+                <li>Créer des objets en 3D</li>
+                <li>Définir une perspective de caméra</li>
+                <li>Définir une intensité de luminosité dans la scène</li>
+                <li>Etc.</li>
+              </ul>
+            </li>
+            <br />
+            <li>
+              Au sein de la scène, deux modèles 3D (un vase et une chaise) ont été
+              implémentés à partir de fichiers OBJ, mais aussi des textures que
+              l'on peut retrouver sur la pomme ou encore sur le vase.
+            </li>
+            <br />
+            <li>
+              Divers éléments dans la scène ont été créés via des objets
+              géométriques contenus dans THREE.js, tels que des murs, un sol, une
+              table, une fenêtre, des pommes, une assiette blanche et une
+              bouteille d'huile.
+            </li>
+            <br />
+            <li>
+              Des effets visuels ont été utilisés comme le miroir avec un plan
+              réfléchissant, ainsi que la pluie.
+            </li>
+          </ul>
+        </p>
+      </div>
+      <img src="peinture.jpg" alt="image de la peinture" />
+    </div>
+
+    <div class="container">
+      <div id="webGL" class="centre"></div>
+    </div>
+
+    <script type="module" src="projet.js"></script>
+  </body>
+</html>
